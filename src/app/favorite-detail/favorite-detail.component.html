@@ -1,0 +1,17 @@
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+    aria-expanded="false">
+    Favoriler
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+    <li *ngFor="let favorite of favorites">
+      <a class="dropdown-item">{{favorite.album.title}}{{favorite.quantity}}
+        <button (click)="removeFromFavorite(favorite.album)" class="btn-sm btn-danger">X
+
+        </button></a>
+      <hr class="dropdown-divider">
+    </li>
+
+    <li><a class="dropdown-item" routerLink="/favorites">Favorilere git</a></li>
+  </ul>
+</li>

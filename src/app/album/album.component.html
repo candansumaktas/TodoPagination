@@ -1,0 +1,50 @@
+<table   class=" table list-group" *ngIf=" loading == false; else loadingResponse">
+    <thead>
+      <tr>
+        <th></th>
+        <th scope="col">#</th>
+        <th scope="col">Id</th>
+        <th scope="col">User ID</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let album of albums">
+        <th scope="row">{{album.id}}</th>
+        <td>{{album.userId}}</td>
+        <td>{{album.title}}</td>
+        <td><button (click)="addToFavorite(album)" class="btn btn-sm btn-primary">Favorilere Ekle</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  
+  <ng-template #loadingResponse >
+
+    <div class="spinner-grow text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-grow text-secondary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-grow text-success" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-grow text-danger" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-grow text-warning" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-grow text-info" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-grow text-light" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-grow text-dark" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+
+
+  </ng-template>
+  
